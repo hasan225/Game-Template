@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ----Custom Var---- */
+
+:root {
+    --clr-neon: hsl(317 100% 54%);
+    --clr-bg: hsl(323 21% 16%);
+    --gap: 10px;
+    --white: white;
+    --NoDecoration: none;
+    --list-style: none;
+    --textBold: bold;
+    --margin-0-5: 5px;
+    --margin-0-15: 15px;
+    --justify-center: center;
+    --justify-between: space-between;
+    --align-items: center;
+    --border-circle: 50%;
+    --marginNone: 0;
+    --paddingNone: 0;
+    --mediumFont: 500;
+    --flex-column: column;
+    --displayNone: none;
+    --border-pill: 20px;
+    --blue-color: #2b1055;
+    --skyBlue-color: #7597de;
+    --darkish-color: #1c0522;
+}
+
+/* ----Utility Classes---- */
+.radius {
+    border-radius: var(--radius);
+}
+
+.hide {
+    display: var(--displayNone);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+
+.flex {
+    display: flex;
+    /* align-items: center; */
+    gap: var(--gap);
+
+}
+
+/* -----Main Styling Starts ------ */
+
+.containers {
+    width: 100%;
+    height: 100vh;
+    /* background: linear-gradient(45deg, #65c3dc, #65b2e6); */
+    background: linear-gradient(45deg, #65dfc9, #6cdbeb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+section.contains {
+    display: grid;
+    grid-template-columns: 1.8fr 2fr 2fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+        "dash cont cont"
+        "dash cont cont"
+        "dash cont cont"
+        "dash cont cont"
+        "dash cont cont";
+    width: 900px;
+    height: 80vh;
+    margin: 0 auto;
+    background: #ffffff54;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 1px 1px 9px 1px #ffffff30;
+    position: relative;
+    z-index: 10;
+    margin: 0 30px;
+}
+
+.dashboard {
+    width: 100%;
+    height: 100%;
+    grid-area: dash;
+    background: #ffffffb0;
+    padding: 25px 20px;
+    text-align: center;
+
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    grid-area: cont;
+}
+
+.proInfo img {
+    width: 60px;
+}
+
+.proInfo p {
+    font-size: 14px;
+    padding: 0;
+    margin: 5px 0 -5px 0;
+    font-weight: 550;
+    color: #235f6c;
+}
+
+.proInfo small {
+    font-size: 11px;
+    padding: 0;
+    color: #8db9c7;
+}
+
+.GI-Wrap img {
+    width: 20px;
+}
+
+.gamingInfo {
+    margin: 40px 0;
+    padding: 0 30px;
+}
+
+.GI-Wrap {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 35px auto;
+    text-align: center;
+    width: 100%;
+    padding-left: 30px;
+}
+
+.GI-Wrap img,
+.GI-Wrap p {
+    text-align: center;
+}
+
+.GI-Wrap p {
+    margin: 0;
+    color: #5597bc;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #65dfc9, #6cdbeb);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.banner img {
+    width: 100px;
+}
+
+.banner p {
+    color: white;
+}
+
+.banner .banner-text {
+    color: white;
+}
+
+.content {
+    padding: 50px 40px;
+}
+
+.games img {
+    width: 55px;
+}
+
+.games {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 30px;
+    background: #ffffffd9;
+    border-radius: 10px;
+    width: 100%;
+    height: 100px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.gameInfo p {
+    margin: 0;
+    color: #70d0d8;
+}
+
+.gameInfo small {
+    font-size: 12px;
+    color: #9fc4d2;
+}
+
+.percentage {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-weight: 550;
+    color: #78d1d8;
+}
+
+h4.game-tag {
+    position: relative;
+    margin-bottom: 70px;
+    color: #61877c;
+    font-weight: 550;
+}
+
+h4.game-tag::after {
+    width: 200px;
+    height: 18px;
+    background: #c8f2f1;
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    border-radius: 30px;
+}
+
+.range-wrap {
+    width: 100%;
+    height: 18px;
+    background: #baebee;
+    border-radius: 30px;
+    margin-top: 8px;
+}
+
+.range {
+    height: 100%;
+    background: #6bdbe8;
+    border-radius: 30px;
+}
+
+.range:first-child {
+    width: 60%;
+
+}
+
+.range:nth-child(2) {
+    width: 56%;
+
+}
+
+.range:last-child {
+    width: 70%;
+}
+
+.games,
+.banner,
+.proInfo,
+.GI-Wrap {
+    cursor: pointer;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background: #c7f3ef80;
+    z-index: 0;
+    border-radius: 50%;
+}
+
+.circle1 {
+    top: 480px;
+    left: 160px;
+}
+
+.circle2 {
+    top: 40px;
+    right: 150px;
+}
+
+
+
+/* ------responsive------- */
+
+
+@media screen and (max-width:799px) {
+    section.contains {
+        display: grid;
+        grid-template-areas:
+            "dash dash dash"
+            "cont cont cont"
+            "cont cont cont"
+            "cont cont cont"
+            "cont cont cont";
+
+        overflow: visible;
+        margin: 0;
+    }
+    .containers {
+        width: 100%;
+        height: auto;}
+        .games-wrap {
+            padding-bottom: 30px;
+        }
+        .circle1 {
+            bottom: -238px;
+            left: -60px;
+        }
+}
